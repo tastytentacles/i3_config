@@ -1,0 +1,48 @@
+URxvt*loginShell: true
+
+URxvt.perl-ext: default,clipboard,url-select,keyboard-select
+URxvt.keysym.C-i: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/chromium
+URxvt.url-select.underline: true
+URxvt*termName: rxvt-unicode 
+
+! URL highlight color
+URxvt.colorUL: #1793d1
+
+URxvt*foreground: #FFFFFF
+URxvt*depth: 32
+![0-100] is transparency
+URxvt*background: #101010
+URxvt*scrollBar: false
+
+! One font to rule them all
+!URxvt*font: xft:Source Code Pro:size=8:antialias=true:highlight=true
+URxvt*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*
+
+! ColorfulColors - Xcolors.net
+!http://www.xcolors.net/dl/colorfulcolors
+!Black
+*color0: #151515
+*color8: #696969
+!Red
+*color1: #FF8EAF
+*color9: #ED4C7A
+!Green
+*color2:  #A6E25F
+*color10: #A6E179
+!Yellow
+*color3: #F8E578
+*color11: #FFDF6B
+!Blue
+*color4: #A6E2F0
+*color12: #79D2FF
+!Magenta
+*color5: #E85B92
+*color13: #BB5D79
+!Cyan-------------
+*color6: #5F868F
+*color14: #87A8AF
+!White
+*color7: #D5F1F2
+*color15: #E2F1F6
+
