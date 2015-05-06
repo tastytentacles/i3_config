@@ -1,0 +1,51 @@
+general {
+        color_good = "#669900"
+        color_degraded = "#FF6600"
+        color_bad = "#CC0000"
+
+        colors = true
+        interval = 5
+}
+
+order += "disk /"
+#order += "run_watch DHCP"
+#order += "run_watch VPN"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery 0"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "  |~  WIFI (%quality at %essid)  ~|  "
+        format_down = "  |~  WIFI N/A  ~|  "
+}
+
+ethernet _first_ {
+        # if you use %speed, i3status requires root privileges
+        format_up = "  |~  ETH (%speed)  ~|  "
+        format_down = "  |~  ETH N/A  ~|  "
+}
+
+battery 0 {
+        format = "  %status %percentage  "
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+        pidfile = "/var/run/vpnc/pid"
+}
+
+tztime local {
+        format = "  [%Y-%m-%d %H:%M:%S]  "
+}
+
+load {
+        format = "%1min"
+}
+
+disk "/" {
+        format = "[%avail]  "
+}
